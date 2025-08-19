@@ -13,6 +13,14 @@ In this project, I deployed Grafana on Amazon ECS using the Fargate launch type.
 - Public IP - Auto-assigned to access Grafana externally.
 - Grafana UI - Accessible at http://<my-public-ip>:3000 after deployment.
 
+ **☁️ AWS Services Used**
+ - **Amazon ECS (Fargate)** → Serverless container orchestration for running Grafana  
+- **Amazon Elastic Container Registry (ECR)** → Hosted the Grafana Docker image  
+- **Amazon VPC** → Provided the networking environment (subnets, routing)  
+- **Amazon IAM** → Managed permissions and roles for ECS tasks  
+- **Amazon CloudWatch** → Monitored logs from ECS tasks  
+- **Amazon Security Groups** → Controlled inbound/outbound traffic (port 3000 open for Grafana)
+
 **Steps I Followed**
 1. Create Security Group
 - Created a new security group for ECS tasks.
@@ -40,7 +48,18 @@ In this project, I deployed Grafana on Amazon ECS using the Fargate launch type.
 5. Access Grafana
 - Retrieved the public IP of the running ECS task.
 - Accessed Grafana(this is the live grafana UI)
-- Here it is below:
 <img width="1916" height="995" alt="Grafana login page" src="https://github.com/user-attachments/assets/7e007472-600f-46d1-bba6-fa5539ec2049" />
+
+**Outcome**
+**Successfully deployed Grafana on Amazon ECS Fargate**
+- This project strengthened my skills in:
+- Docker container deployment on ECS
+- Fargate serverless container management
+- IAM roles for ECS tasks
+- Security group configuration for application access
+
+
+
+
 
 
